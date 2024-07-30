@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply font-roboto font-normal text-base;
+  }
+  .swiper {
+    @apply w-full h-[800px];
+  }
+  .swiper-slide {
+    @apply w-[405px] flex;
+  }
+  .btn-next {
+    @apply h-9 w-9 rounded-full flex justify-center items-center bg-[#E2E2E6];
+  }
+  .btn-prev {
+    @apply h-9 w-9 rounded-full flex justify-center items-center bg-[#E2E2E6];
+  }
+  .btn-next.swiper-button-disabled,
+  .btn-prev.swiper-button-disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+  .grid-list {
+    grid-template-rows: minmax(152px, max-content) minmax(86px, max-content) minmax(
+        112px,
+        max-content
+      );
+    @apply gap-[40px];
+  }
+}
